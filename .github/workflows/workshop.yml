@@ -1,0 +1,33 @@
+name: workshop
+
+on:
+  push:
+    tags:
+      - "v*.*.*"
+jobs:
+  workshop:
+    runs-on: windows-2022
+    permissions:
+      contents: write
+
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v7
+
+      - name: build
+        shell: cmd
+        run: |
+          ./scripts/build.bat
+
+      - name: publish
+        shell: cmd
+        run: |
+          7z a -t7z workshop-${{ github.run_id }}.7z ./release/*
+
+      - name: create release and upload assets
+        uses: softprops/action-gh-release@v3
+        with:
+          files: |
+            workshop-${{ github.run_id }}.7z
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
