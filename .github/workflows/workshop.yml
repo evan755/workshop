@@ -12,20 +12,20 @@ jobs:
       contents: write
 
     steps:
-      - name: checkout code
+      - name: Checkout Code
         uses: actions/checkout@v7
 
-      - name: build
+      - name: Build
         shell: cmd
         run: |
           ./scripts/build.bat
 
-      - name: publish
+      - name: Publish
         shell: cmd
         run: |
           7z a -t7z workshop-${{ github.run_id }}.7z ./release/*
 
-      - name: create release and upload assets
+      - name: Create Release And Upload Assets
         uses: softprops/action-gh-release@v3
         with:
           files: |
