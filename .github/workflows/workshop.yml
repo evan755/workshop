@@ -4,6 +4,7 @@ on:
   push:
     tags:
       - "v*.*.*"
+
 jobs:
   workshop:
     runs-on: windows-2022
