@@ -163,4 +163,4 @@ echo ;curl.cainfo=
 echo.
 ) > release\conf\php-apache2handler.ini
 
-copy release\conf\php-apache2handler.ini release\conf\php.ini
+copy release\conf\php-apache2handler.ini release\bin\php.ini
