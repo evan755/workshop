@@ -1,4 +1,4 @@
-name: workshop
+name: WorkShop Build and Publish
 
 on:
   push:
