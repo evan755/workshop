@@ -39,7 +39,7 @@ copy origin\vc_redist.x64.exe release
 
 :xml
 (
-echo "%~dp0php.exe" "%~dp0composer.phar" %*
+echo "%%~dp0php.exe" "%%~dp0composer.phar" %%*
 ) > release\bin\composer.bat
 
 :xml
