@@ -57,7 +57,7 @@ echo.
 echo ServerTokens Prod
 echo ServerSignature Off
 echo.
-echo ErrorLog "${ServerRoot}/logs/error.log"
+echo ErrorLog "${workshop}/logs/error.log"
 echo LogLevel emerg
 echo.
 echo ^<IfModule log_config_module^>
