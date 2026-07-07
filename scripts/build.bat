@@ -84,6 +84,7 @@ echo LoadModule autoindex_module modules/mod_autoindex.so
 echo LoadModule dir_module modules/mod_dir.so
 echo LoadModule mime_module modules/mod_mime.so
 echo LoadModule info_module modules/mod_info.so
+echo LoadModule status_module modules/mod_status.so
 echo LoadModule php_module bin/php8apache2_4.dll
 echo.
 echo AddHandler application/x-httpd-php .php
@@ -117,6 +118,9 @@ echo         AllowOverride All
 echo     ^</Directory^^>
 echo     ^<Location "/server-info"^>
 echo        SetHandler server-info
+echo     ^</Location^>
+echo     ^<Location "/server-status"^>
+echo        SetHandler server-status
 echo     ^</Location^>
 echo     ErrorLog "${workshop}/logs/workshop-error.log"
 echo     CustomLog "${workshop}/logs/workshop-access.log" common
