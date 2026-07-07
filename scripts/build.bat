@@ -118,9 +118,11 @@ echo         AllowOverride All
 echo     ^</Directory^^>
 echo     ^<Location "/server-info"^>
 echo        SetHandler server-info
+echo        Require all granted
 echo     ^</Location^>
 echo     ^<Location "/server-status"^>
 echo        SetHandler server-status
+echo        Require all granted
 echo     ^</Location^>
 echo     ErrorLog "${workshop}/logs/workshop-error.log"
 echo     CustomLog "${workshop}/logs/workshop-access.log" common
