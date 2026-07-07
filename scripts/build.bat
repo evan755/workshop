@@ -40,7 +40,6 @@ copy origin\php\icu*.dll release\bin
 copy origin\composer.phar release\bin
 copy origin\vc_redist.x64.exe release
 
-
 :xml
 (
 echo "%%~dp0php.exe" "%%~dp0composer.phar" %%*
@@ -163,3 +162,5 @@ echo [curl]
 echo ;curl.cainfo=
 echo.
 ) > release\conf\php-apache2handler.ini
+
+copy release\conf\php-apache2handler.ini release\conf\php.ini
