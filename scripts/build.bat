@@ -66,7 +66,6 @@ copy origin\php\libssh2.dll release\bin
 copy origin\php\pharcommand.phar release\bin
 copy origin\php\phar.phar.bat release\bin
 copy origin\php\icu*.dll release\bin\
-copy origin\composer.phar release\bin\
 
 :xml
 (
