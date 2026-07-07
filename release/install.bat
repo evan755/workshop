@@ -1,10 +1,10 @@
 @echo off
 
 echo 1.Create WorkShop Config
-set aplite=%cd%
+set workshop_dir=%cd%
 :xml
 (
-echo Define workshop "%aplite%"
+echo Define workshop "%workshop_dir%"
 echo Include conf^/workshop.conf
 )>conf/httpd.conf
 echo.
