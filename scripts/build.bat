@@ -30,6 +30,7 @@ copy origin\apache\Apache24\modules\* release\modules\
 copy origin\apache\Apache24\conf\mime.types release\conf\
 
 copy origin\php\ext\* release\php_ext\
+copy origin\php_mongodb\php_mongodb.dll release\php_ext\
 copy origin\php\php.exe release\bin
 copy origin\php\php8apache2_4.dll release\bin
 copy origin\php\php8ts.dll release\bin
@@ -40,6 +41,7 @@ copy origin\php\phar.phar.bat release\bin
 copy origin\php\icu*.dll release\bin
 copy origin\composer.phar release\bin
 copy origin\vc_redist.x64.exe release
+
 
 :xml
 (
@@ -112,6 +114,7 @@ echo extension=mysqli
 echo extension=pdo_mysql
 echo extension=sqlite3
 echo extension=pdo_sqlite
+echo extension=mongodb
 echo.
 echo zend_extension=opcache
 echo.
