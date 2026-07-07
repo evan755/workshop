@@ -83,6 +83,7 @@ echo LoadModule rewrite_module modules/mod_rewrite.so
 echo LoadModule autoindex_module modules/mod_autoindex.so
 echo LoadModule dir_module modules/mod_dir.so
 echo LoadModule mime_module modules/mod_mime.so
+echo LoadModule info_module modules/mod_info.so
 echo LoadModule php_module bin/php8apache2_4.dll
 echo.
 echo AddHandler application/x-httpd-php .php
@@ -113,7 +114,10 @@ echo     DirectoryIndex index.html index.php
 echo     ^<Directory "${workshop}/htdocs"^>
 echo         Options Indexes FollowSymLinks MultiViews
 echo         AllowOverride All
-echo     ^</Directory^>
+echo     ^</Directory^^>
+echo     ^<Location "/server-info"^>
+echo        SetHandler server-info
+echo     ^</Location^>
 echo     ErrorLog "${workshop}/logs/workshop-error.log"
 echo     CustomLog "${workshop}/logs/workshop-access.log" common
 echo ^</VirtualHost^>
