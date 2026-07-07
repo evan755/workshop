@@ -66,6 +66,7 @@ copy origin\php\libssh2.dll release\bin
 copy origin\php\pharcommand.phar release\bin
 copy origin\php\phar.phar.bat release\bin
 copy origin\php\icu*.dll release\bin\
+copy origin\composer.phar release\bin
 
 :xml
 (
@@ -114,7 +115,7 @@ echo     DirectoryIndex index.html index.php
 echo     ^<Directory "${workshop}/htdocs"^>
 echo         Options Indexes FollowSymLinks MultiViews
 echo         AllowOverride All
-echo     ^</Directory^^>
+echo     ^</Directory^>
 echo     ^<Location "/server-info"^>
 echo        SetHandler server-info
 echo        Require all granted
