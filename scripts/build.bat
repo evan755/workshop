@@ -4,16 +4,20 @@ set apache=https://www.apachelounge.com/download/VS18/binaries/httpd-2.4.68-2606
 set php=https://downloads.php.net/~windows/releases/php-8.4.23-Win32-vs17-x64.zip
 set composer=https://getcomposer.org/download/2.10.2/composer.phar
 set vc_redist=https://aka.ms/vc14/vc_redist.x64.exe
+set php_mongodb=https://downloads.php.net/~windows/pecl/releases/mongodb/2.3.3/php_mongodb-2.3.3-8.4-ts-vs17-x64.zip
 
 mkdir origin
+curl -L -o origin/vc_redist.x64.exe %vc_redist%
 curl -o origin/apache.zip %apache%
 curl -o origin/php.zip  %php%
 curl -o origin/composer.phar %composer%
-curl -L -o origin/vc_redist.x64.exe %vc_redist%
+curl -o origin/php_mongodb.zip %php_mongodb%
 
 7z x origin/apache.zip -o./origin/apache -y
 7z x origin/php.zip -o./origin/php -y
-7z x origin/nodejs.zip -o./origin/nodejs -y
+7z x origin/php_mongodb.zip -o./origin/php_mongodb -y
+
+tree /f origin
 
 mkdir release\bin
 mkdir release\conf
