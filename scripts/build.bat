@@ -17,7 +17,7 @@ curl -o origin/php_mongodb.zip %php_mongodb%
 7z x origin/php.zip -o./origin/php -y
 7z x origin/php_mongodb.zip -o./origin/php_mongodb -y
 
-tree /f origin
+tree /f origin/php_mongodb
 
 mkdir release\bin
 mkdir release\conf
