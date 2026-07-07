@@ -23,7 +23,35 @@ mkdir release\logs
 mkdir release\modules
 mkdir release\php_ext
 
-copy origin\apache\Apache24\bin\* release\bin\
+copy origin\apache\Apache24\bin\httpd.exe release\bin\
+copy origin\apache\Apache24\bin\apr_crypto_openssl-1.dll release\bin\
+copy origin\apache\Apache24\bin\apr_dbd_odbc-1.dll release\bin\
+copy origin\apache\Apache24\bin\apr_ldap-1.dll release\bin\
+copy origin\apache\Apache24\bin\libapr-1.dll release\bin\
+copy origin\apache\Apache24\bin\libapriconv-1.dll release\bin\
+copy origin\apache\Apache24\bin\libaprutil-1.dll release\bin\
+copy origin\apache\Apache24\bin\libcrypto-3-x64.dll release\bin\
+copy origin\apache\Apache24\bin\libcurl.dll release\bin\
+copy origin\apache\Apache24\bin\libexpat.dll release\bin\
+copy origin\apache\Apache24\bin\libhttpd.dll release\bin\
+copy origin\apache\Apache24\bin\libssl-3-x64.dll release\bin\
+copy origin\apache\Apache24\bin\libxml2.dll release\bin\
+copy origin\apache\Apache24\bin\pcre.dll release\bin\
+copy origin\apache\Apache24\bin\pcre2-8.dll release\bin\
+copy origin\apache\Apache24\bin\pcre2-config release\bin\
+copy origin\apache\Apache24\bin\pcre2-posix.dll release\bin\
+copy origin\apache\Apache24\bin\lua.exe release\bin\
+copy origin\apache\Apache24\bin\lua54.dll release\bin\
+copy origin\apache\Apache24\bin\lua55.dll release\bin\
+copy origin\apache\Apache24\bin\luac.exe release\bin\
+copy origin\apache\Apache24\bin\nghttp2.dll release\bin\
+copy origin\apache\Apache24\bin\jansson.dll release\bin\
+copy origin\apache\Apache24\bin\brotlicommon.dll release\bin\
+copy origin\apache\Apache24\bin\brotlidec.dll release\bin\
+copy origin\apache\Apache24\bin\brotlienc.dll release\bin\
+copy origin\apache\Apache24\bin\zstd.dll release\bin\
+copy origin\apache\Apache24\bin\z.dll release\bin\
+
 copy origin\apache\Apache24\modules\* release\modules\
 copy origin\apache\Apache24\conf\mime.types release\conf\
 
