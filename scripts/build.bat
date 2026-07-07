@@ -102,9 +102,59 @@ echo extension=fileinfo
 echo extension=gd
 echo extension=openssl
 echo extension=intl
+echo extension=zip
 echo extension=mbstring
 echo extension=mysqli
 echo extension=pdo_mysql
 echo extension=sqlite3
 echo extension=pdo_sqlite
+echo.
+echo zend_extension=opcache
+echo.
+echo [opcache]
+echo ;opcache.enable=1
+echo ;opcache.enable_cli=0
+echo ;opcache.memory_consumption=128
+echo ;opcache.interned_strings_buffer=8
+echo ;opcache.max_accelerated_files=10000
+echo ;opcache.max_wasted_percentage=5
+echo ;opcache.use_cwd=1
+echo ;opcache.validate_timestamps=1
+echo ;opcache.revalidate_freq=2
+echo ;opcache.revalidate_path=0
+echo ;opcache.save_comments=1
+echo ;opcache.record_warnings=0
+echo ;opcache.enable_file_override=0
+echo ;opcache.optimization_level=0x7FFFBFFF
+echo ;opcache.dups_fix=0
+echo ;opcache.blacklist_filename=
+echo ;opcache.max_file_size=0
+echo ;opcache.force_restart_timeout=180
+echo ;opcache.error_log=
+echo ;opcache.log_verbosity_level=1
+echo ;opcache.preferred_memory_model=
+echo ;opcache.protect_memory=0
+echo ;opcache.restrict_api=
+echo ;opcache.mmap_base=
+echo ;opcache.cache_id=
+echo ;opcache.file_cache=
+echo ;opcache.file_cache_only=0
+echo ;opcache.file_cache_consistency_checks=1
+echo ;opcache.file_cache_fallback=1
+echo ;opcache.huge_code_pages=0
+echo ;opcache.validate_permission=0
+echo ;opcache.validate_root=0
+echo ;opcache.opt_debug_level=0
+echo ;opcache.preload=
+echo ;opcache.preload_user=
+echo ;opcache.file_update_protection=2
+echo ;opcache.lockfile_path=/tmp
+echo.
+echo [openssl]
+echo ;openssl.cafile=
+echo ;openssl.capath=
+echo.
+echo [curl]
+echo ;curl.cainfo=
+echo.
 ) > release\conf\php-apache2handler.ini
