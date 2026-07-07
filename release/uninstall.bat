@@ -11,5 +11,5 @@ del /f logs\*.log 2>nul
 echo.
 
 echo 3. Removing environment variables...
-wmic ENVIRONMENT where "name='WorkShop'" delete
+wmic ENVIRONMENT where "name='WorkShop'" delete 2>nul
 echo.
