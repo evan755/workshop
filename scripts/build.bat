@@ -10,7 +10,7 @@ mkdir origin
 curl -L -o origin/vc_redist.x64.exe %vc_redist%
 curl -o origin/apache.zip %apache%
 curl -o origin/php.zip  %php%
-curl -o origin/composer.phar %composer%
+curl -L -o origin/composer.phar %composer%
 curl -o origin/php_mongodb.zip %php_mongodb%
 
 7z x origin/apache.zip -o./origin/apache -y
@@ -65,7 +65,7 @@ copy origin\php\libssh2.dll release\bin
 copy origin\php\pharcommand.phar release\bin
 copy origin\php\phar.phar.bat release\bin
 copy origin\php\icu*.dll release\bin\
-copy origin\composer.phar release\bin
+copy origin\composer.phar release\bin\
 copy origin\vc_redist.x64.exe release
 
 :xml
