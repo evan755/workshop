@@ -31,9 +31,16 @@ copy origin\php\php8apache2_4.dll release\bin
 copy origin\php\php8ts.dll release\bin
 copy origin\php\libsqlite3.dll release\bin
 copy origin\php\libssh2.dll release\bin
+copy origin\php\pharcommand.phar release\bin
+copy origin\php\phar.phar.bat release\bin
 copy origin\php\icu*.dll release\bin
 copy origin\composer.phar release\bin
 copy origin\vc_redist.x64.exe release
+
+:xml
+(
+echo "%~dp0php.exe" "%~dp0composer.phar" %*
+) > release\bin\composer.bat
 
 :xml
 (
