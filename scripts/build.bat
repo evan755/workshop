@@ -1,6 +1,7 @@
 @echo off
 
 set apache=https://www.apachelounge.com/download/VS18/binaries/httpd-2.4.68-260827-Win64-VS18.zip
+set nodejs=https://nodejs.org/dist/v24.20.0/node-v24.20.0-win-x64.zip
 set php=https://downloads.php.net/~windows/releases/archives/php-8.5.10-Win32-vs17-x64.zip
 set composer=https://getcomposer.org/download/2.10.2/composer.phar
 set vc_redist=https://aka.ms/vc14/vc_redist.x64.exe
@@ -10,6 +11,7 @@ mkdir origin
 curl -L -o origin/vc_redist.x64.exe %vc_redist%
 curl -o origin/apache.zip %apache%
 curl -o origin/php.zip  %php%
+curl -o origin/nodejs.zip  %nodejs%
 curl -o origin/composer.phar %composer%
 curl -o origin/php_mongodb.zip %php_mongodb%
 
