@@ -58,11 +58,17 @@ copy origin\apache\Apache24\bin\z.dll release\bin\
 copy origin\apache\Apache24\modules\* release\modules\
 copy origin\apache\Apache24\conf\mime.types release\conf\
 
+copy origin\nodejs\node-v24.20.0-win-x64\corepack release\bin
+copy origin\nodejs\node-v24.20.0-win-x64\corepack.cmd release\bin
+copy origin\nodejs\node-v24.20.0-win-x64\install_tools.bat release\bin
 copy origin\nodejs\node-v24.20.0-win-x64\node.exe release\bin
+copy origin\nodejs\node-v24.20.0-win-x64\nodevars.bat release\bin
 copy origin\nodejs\node-v24.20.0-win-x64\npm release\bin
 copy origin\nodejs\node-v24.20.0-win-x64\npm.cmd release\bin
+copy origin\nodejs\node-v24.20.0-win-x64\npm.ps1 release\bin
 copy origin\nodejs\node-v24.20.0-win-x64\npx release\bin
 copy origin\nodejs\node-v24.20.0-win-x64\npx.cmd release\bin
+copy origin\nodejs\node-v24.20.0-win-x64\npx.ps1 release\bin
 xcopy /s /e /y origin\nodejs\node-v24.20.0-win-x64\node_modules release\bin\node_modules\
 
 copy origin\vc_redist.x64.exe release
