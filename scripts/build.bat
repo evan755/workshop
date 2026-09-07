@@ -17,6 +17,7 @@ curl -o origin/php_mongodb.zip %php_mongodb%
 
 7z x origin/apache.zip -o./origin/apache -y
 7z x origin/php.zip -o./origin/php -y
+7z x origin/nodejs.zip -o./origin/nodejs -y
 7z x origin/php_mongodb.zip -o./origin/php_mongodb -y
 
 mkdir release\bin
@@ -56,6 +57,13 @@ copy origin\apache\Apache24\bin\z.dll release\bin\
 
 copy origin\apache\Apache24\modules\* release\modules\
 copy origin\apache\Apache24\conf\mime.types release\conf\
+
+copy origin\nodejs\node-v24.20.0-win-x64\node.exe release\bin
+copy origin\nodejs\node-v24.20.0-win-x64\npm release\bin
+copy origin\nodejs\node-v24.20.0-win-x64\npm.cmd release\bin
+copy origin\nodejs\node-v24.20.0-win-x64\npx release\bin
+copy origin\nodejs\node-v24.20.0-win-x64\npx.cmd release\bin
+xcopy /s /e /y origin\nodejs\node-v24.20.0-win-x64\node_modules release\bin\node_modules\
 
 copy origin\vc_redist.x64.exe release
 copy origin\php\ext\* release\php_ext\
