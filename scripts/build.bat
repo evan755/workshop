@@ -1,7 +1,7 @@
 @echo off
 
-set apache=https://www.apachelounge.com/download/VS18/binaries/httpd-2.4.68-260617-Win64-VS18.zip
-set php=https://downloads.php.net/~windows/releases/php-8.4.23-Win32-vs17-x64.zip
+set apache=https://www.apachelounge.com/download/VS18/binaries/httpd-2.4.68-260827-Win64-VS18.zip
+set php=https://downloads.php.net/~windows/releases/archives/php-8.5.10-Win32-vs17-x64.zip
 set composer=https://getcomposer.org/download/2.10.2/composer.phar
 set vc_redist=https://aka.ms/vc14/vc_redist.x64.exe
 set php_mongodb=https://downloads.php.net/~windows/pecl/releases/mongodb/2.3.3/php_mongodb-2.3.3-8.4-ts-vs17-x64.zip
